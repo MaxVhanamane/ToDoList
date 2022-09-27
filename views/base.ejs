@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo List</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="box" id="heading">
+        <h1>Today is <%= exactDay %>
+        </h1>
+    </div>
+    <div class="box">
+
+        <!-- Showing items using traditional for loop -->
+        <!-- <%for (let i=0 ; i<newItems.length ;i++){%>
+            <div class="item">
+
+                <input type="checkbox">
+                <p>
+                    <%=newItems[i].name%>
+                </p>
+
+            </div>
+            <% }%> -->
+
+        <!-- Showing items using forEach loop -->
+
+        <%newItems.forEach(function(element){%>
+            <!-- To submit checkbox value to delete item we have to put it in the form  -->
+            <form action="/delete" method="POST">
+
+                <div class="item">
+                    <!-- to submit checkbox value/name when we check then we have to use onChange="this.form.submit() -->
+                    <input type="checkbox" name="checkboxVal" value="<%= element._id %>" onChange="this.form.submit()"  >
+                    <p> <%=element.name%></p>
+    
+                </div>
+
+            </form>
+            <%})%>
+
+<!--  Making post request to send user data -->
+                <form class="item" action="/" method="POST">
+                    <input type="text" name="taskName" placeholder="Add Task" autocomplete="off">
+                    <button type="submit">+</button>
+
+                </form>
+    </div>
+
+
+
+
+</body>
+
+</html>
