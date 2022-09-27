@@ -1,8 +1,18 @@
-html {
+html,body {
   background-color: #e4e9fd;
-  background-image: -webkit-linear-gradient(65deg, #a683e3 50%, #e4e9fd 50%);
+  background-image: -webkit-linear-gradient(65deg,  rgb(249 115 22) 50%, #e4e9fd 50%);
   min-height: 100vh;
   font-family: "helvetica neue";
+  max-width: 100%;
+  overflow-x: hidden;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+  margin:0;
+  padding: 0;
+}
+/* 1B65A7 */
+::-webkit-scrollbar {
+  display: none;
 }
 
 h1 {
@@ -19,7 +29,7 @@ h1 {
 }
 
 #heading {
-  background-color: #a683e3;
+  background-color:  rgb(249 115 22);
   text-align: center;
 }
 
@@ -36,7 +46,7 @@ h1 {
 
 input:checked + p {
   text-decoration: line-through;
-  text-decoration-color: #a683e3;
+  text-decoration-color:  rgb(249 115 22);
 }
 
 input[type="checkbox"] {
@@ -61,7 +71,7 @@ button {
   width: 50px;
   border-radius: 50%;
   border-color: transparent;
-  background-color: #a683e3;
+  background-color:  rgb(249 115 22);
   color: #fff;
   font-size: 30px;
   padding: 6px;
@@ -73,7 +83,7 @@ button:hover,
 button:focus,
 button:active {
 
-  background-color: rgba(75, 0, 209, 0.75);
+  background-color: rgb(234 88 12);
   
 }
 
@@ -85,12 +95,12 @@ input[type="text"] {
   background: transparent;
   font-size: 20px;
   font-weight: 200;
-  width: 313px;
+  width: 19.5rem;
 }
 
 input[type="text"]:focus {
   outline: none;
-  box-shadow: inset 0 -3px 0 0 #a683e3;
+  box-shadow: inset 0 -3px 0 0  rgb(249 115 22);
 }
 
 ::placeholder {
@@ -103,4 +113,23 @@ footer {
   color: rgba(0, 0, 0, 0.5);
   text-align: center;
   margin-top: 5%;
+}
+
+@media only screen and (max-width: 768px) {
+  .box {
+    max-width: 20rem;
+    margin: 20px auto;
+
+  }
+  button {
+    min-height: 35px;
+    width: 35px;
+    font-size: 28px;
+    padding: none;
+    margin-right: 5rem;
+    text-align: center;
+  }
+  input[type="text"] {
+    width: 15.5rem;
+  }
 }
