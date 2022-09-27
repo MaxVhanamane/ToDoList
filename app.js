@@ -41,7 +41,7 @@ const Item = mongoose.model("item", itemsSchema);
 // creating some default items for table/collection named Item
 
 const item1 = new Item({
-    name: "Click on Add Task to add a task"
+    name: "Click Add Task to begin typing your task, then press + icon."
 });
 
 const item2 = new Item({

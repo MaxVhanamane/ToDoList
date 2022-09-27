@@ -77,6 +77,7 @@ button {
   padding: 6px;
   border-width: 0;
   outline: none;
+  text-align: center;
 }
 
 
@@ -130,8 +131,9 @@ footer {
     padding: none;
     margin-right: none;
     text-align: center;
+    
   }
   input[type="text"] {
-    width: 15rem;
+    width: 16.5rem;
   }
 }
