@@ -76,6 +76,7 @@ button {
   font-size: 30px;
   padding: 6px;
   border-width: 0;
+  outline: none;
 }
 
 
@@ -117,19 +118,20 @@ footer {
 
 @media only screen and (max-width: 768px) {
   .box {
-    max-width: 20rem;
+    max-width: 21rem;
     margin: 20px auto;
 
   }
   button {
-    min-height: 35px;
-    width: 35px;
+    min-height: 2rem;
+    outline: none;
+    width: 2rem;
     font-size: 28px;
     padding: none;
-    margin-right: 5rem;
+    margin-right: none;
     text-align: center;
   }
   input[type="text"] {
-    width: 15.5rem;
+    width: 15rem;
   }
 }
